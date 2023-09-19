@@ -319,6 +319,31 @@ body{
   word-break: break-all;
   overflow: auto;
 }
+/* opinion */
+.detail_form{
+  display: block;
+  width: 80%;
+  margin: 0 10%;
+  height: 15em;
+}
+.opinion_text{
+  display: block;
+  width: 100%;
+  height: 80%;
+}
+.opinion_submit{
+  width: 30%;
+  margin-left: 70%;
+  margin-top: 1%;
+  height: 19%;
+  background-color: #00ced1;
+  color: #fff;
+  border: none;
+}
+.input_submit:hover{
+  background-color: #b0e0e6;
+  color: #fff;
+}
 
 /* タブレット */
 @media screen and (min-width: 600px) {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Map;
+use App\Models\Opinion;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -59,6 +60,21 @@ class HomeController extends Controller
     public function diary_show()
     {
         return view('diary');
+    }
+
+    public function opinion_show(){
+        return view('opinion');
+    }
+
+    public function opinion(Request $request){
+
+        Opinion::create([
+            'opinion' => $request->opinion,
+        ]);
+
+        $request->session()->regenerateToken();
+
+        return redirect()->route('opinion');
     }
 
 }

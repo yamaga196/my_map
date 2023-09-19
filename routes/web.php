@@ -40,3 +40,7 @@ Route::post('/diary', [DiaryController::class, 'diary_create'])->name('diary_cre
 Route::get('/diary_detail_list/{id}', [DiaryController::class, 'diary_detail_show'])->name('diary_detail_show');
 
 Route::get('/diary_detail/{id}', [DiaryController::class, 'diary_detail_show_detail'])->name('diary_detail_show_detail');
+
+Route::get('/opinion', [HomeController::class, 'opinion_show'])->name('opinion_show');
+
+Route::post('/opinion', [HomeController::class, 'opinion'])->name('opinion');
