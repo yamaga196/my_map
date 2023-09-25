@@ -16,7 +16,7 @@ class DetailText extends Migration
         Schema::create('detail_text', function (Blueprint $table) {
             $table->increments('id');
             $table->string('text');
-            $table->foreignId('maps_id')->constrained();
+            $table->unsignedInteger('maps_id')->constrained();
             $table->timestamps();
         });
     }
